@@ -7,7 +7,7 @@ function Bedroom({setPage}) {
 
     return(
         <>
-        <h1 className="room-name">Bedroom</h1>
+        <h1 className="room-name" onClick={() => {setPage(0)}}>Bedroom</h1>
         <div className="delta-room down" onClick={() => {setPage(6)}}>↓</div>
         <div className="delta-room left" onClick={() => {setPage(3)}}>←</div>
         </>

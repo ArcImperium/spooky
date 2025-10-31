@@ -13,6 +13,46 @@ import Patio from './Patio.jsx'
 
 function App() {
   const [page, setPage] = useState(0)
+  
+  const [discovered1, setDiscovered1] = useState(true)
+  const [discovered2, setDiscovered2] = useState(false)
+  const [discovered3, setDiscovered3] = useState(false)
+  const [discovered4, setDiscovered4] = useState(false)
+  const [discovered5, setDiscovered5] = useState(false)
+  const [discovered6, setDiscovered6] = useState(false)
+  const [discovered7, setDiscovered7] = useState(false)
+  const [discovered8, setDiscovered8] = useState(false)
+  const [discovered9, setDiscovered9] = useState(false)
+
+  useEffect(() => {
+    if (page === 1) {
+      setDiscovered1(true)
+    }
+    else if (page === 2) {
+      setDiscovered2(true)
+    }
+    else if (page === 3) {
+      setDiscovered3(true)
+    }
+    else if (page === 4) {
+      setDiscovered4(true)
+    }
+    else if (page === 5) {
+      setDiscovered5(true)
+    }
+    else if (page === 6) {
+      setDiscovered6(true)
+    }
+    else if (page === 7) {
+      setDiscovered7(true)
+    }
+    else if (page === 8) {
+      setDiscovered8(true)
+    }
+    else if (page === 9) {
+      setDiscovered9(true)
+    }
+  }, [page])
 
   function findPage() {
     if (page === 1) {
@@ -43,7 +83,7 @@ function App() {
       return <Bedroom setPage={setPage}/>
     }
     else {
-      return <Home setPage={setPage}/>
+      return <Home setPage={setPage} discovered1={discovered1} discovered2={discovered2} discovered3={discovered3} discovered4={discovered4} discovered5={discovered5} discovered6={discovered6} discovered7={discovered7} discovered8={discovered8} discovered9={discovered9}/>
     }
   }
 

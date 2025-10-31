@@ -26,6 +26,13 @@
     justify-content: center;
 }
 
+.room.show {
+    background-color: white;
+}
+.room.not {
+    background-color: gray;
+}
+
 .room:hover {
     transform: scale(1.1);
     z-index: 100;
