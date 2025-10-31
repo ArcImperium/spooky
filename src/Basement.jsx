@@ -7,6 +7,8 @@ function Basement({setPage}) {
 
     return(
         <>
+        <h1 className="room-name">Basement</h1>
+        <div className="delta-room up" onClick={() => {setPage(7)}}>↑</div>
         </>
     )
 }

@@ -1,0 +1,41 @@
+.room-name {
+    position: fixed;
+    font-size: 80px;
+    text-align: center;
+    height: 40%;
+    width: 60%;
+    top: 30%;
+    left: 20%;
+}
+
+.delta-room {
+    position: fixed;
+    border: 2px solid black;
+    aspect-ratio: 1/1;
+    text-align: center;
+    font-size: 40px;
+}
+
+.delta-room.up {
+    width: 5%;
+    top: 2%;
+    left: 47.5%;
+}
+
+.delta-room.down {
+    width: 5%;
+    bottom: 2%;
+    left: 47.5%;
+}
+
+.delta-room.left {
+    height: 10%;
+    left: 2%;
+    top: 45%;
+}
+
+.delta-room.right {
+    height: 10%;
+    right: 2%;
+    top: 45%;
+}

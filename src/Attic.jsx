@@ -7,6 +7,8 @@ function Attic({setPage}) {
     
     return(
         <>
+        <h1 className="room-name">Attic</h1>
+        <div className="delta-room up" onClick={() => {setPage(6)}}>↑</div>
         </>
     )
 }
