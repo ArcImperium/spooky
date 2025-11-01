@@ -1,0 +1,85 @@
+.story-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+.story {
+    position: fixed;
+    display: flex;
+    top: 10%;
+    left: 10%;
+    height: 80%;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+}
+
+.message {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    transition: opacity 2s ease-in-out;
+}
+.message.get-out {
+    opacity: 0;
+}
+.message.get-in {
+    opacity: 1;
+}
+
+.story-button {
+    position: fixed;
+    height: 10%;
+    width: 10%;
+    bottom: 5%;
+    left: 45%;
+
+    background-color: black;
+    border: 4px solid white;
+    color: white;
+    border-radius: 20px;
+    font-size: 25px;
+
+    transition: transform 0.5s ease;
+}
+.story-button:hover {
+    transform: scale(1.05);
+}
+
+.heck-no-container {
+    position: fixed;
+    height: 50%;
+    width: 50%;
+    bottom: 75%;
+    left: 25%;
+
+    background-color: pink;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 10px pink;
+}
+
+.heck-no {
+    position: fixed;
+    height: 10%;
+    width: 10%;
+    top: 5%;
+    left: 45%;
+
+    background-color: hotpink;
+    border: 4px solid white;
+    color: white;
+    border-radius: 20px;
+    font-size: 25px;
+
+    transition: box-shadow 0.5s ease, transform 0.5s ease;
+}
+.heck-no:hover {
+    box-shadow: inset 0 0 10px 2px pink;
+    transform: scale(1.05);
+}   

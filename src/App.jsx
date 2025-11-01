@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react'
 import './App.css'
+import Story from './Story.jsx'
 import Home from './Home.jsx'
 import Attic from './Attic.jsx'
 import Basement from './Basement.jsx'
@@ -13,6 +14,8 @@ import Patio from './Patio.jsx'
 
 function App() {
   const [page, setPage] = useState(0)
+  const [showStory, setShowStory] = useState(true)
+  const [win, setWin] = useState(false)
   
   const [discovered1, setDiscovered1] = useState(true)
   const [discovered2, setDiscovered2] = useState(false)
@@ -89,7 +92,8 @@ function App() {
 
   return (
     <>
-      {findPage(page)}
+    {showStory && (<Story setShowStory={setShowStory}/>)}
+    {!showStory && (<>{findPage(page)}</>)}
     </>
   )
 }
