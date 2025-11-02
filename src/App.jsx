@@ -39,8 +39,14 @@ function App() {
 
   const [name, setName] = useState("")
   const [showNameInput, setShowNameInput] = useState(true)
-  const stoneOrder = shuffleArray([0, 1, 2, 3, 4, 5, 6, 7, 8])
+  const [stoneOrder, setStoneOrder] = useState([])
   const [stoneInput, setStoneInput] = useState([])
+
+  useEffect(() =>{
+    const stones = [0, 1, 2, 3, 4, 5, 6, 7]
+    const shuffledStones = [...stones].sort(() => Math.random() - 0.5)
+    setStoneOrder(shuffledStones)
+  }, [])
 
   useEffect(() => {
     if (page === 1) {
