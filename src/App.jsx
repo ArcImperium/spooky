@@ -37,6 +37,9 @@ function App() {
   const [unlock8, setUnlock8] = useState(false)
   const [unlock9, setUnlock9] = useState(false)
 
+  const [name, setName] = useState("")
+  const [showNameInput, setShowNameInput] = useState(true)
+
   useEffect(() => {
     if (page === 1) {
       setDiscovered1(true)
@@ -69,7 +72,7 @@ function App() {
 
   function findPage() {
     if (page === 1) {
-      return <Courtyard setPage={setPage} setUnlock1={setUnlock1} unlock1={unlock1}/>
+      return <Courtyard setPage={setPage} setUnlock1={setUnlock1} unlock1={unlock1} name={name} setName={setName} setShowNameInput={setShowNameInput} showNameInput={showNameInput}/>
     }
     else if (page === 2) {
       return <Foyer setPage={setPage} setUnlock2={setUnlock2} unlock2={unlock2}/>

@@ -71,3 +71,49 @@
     right: 2%;
     top: 45%;
 }
+
+.name-wrap {
+    position: fixed;
+    display: flex;
+    height: 50%;
+    width: 50%;
+    left: 25%;
+    top: 25%;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.name-input {
+    height: 12%;
+    width: 30%;
+
+    text-align: center;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.name-preview {
+    margin: 40px;
+    font-size: 40px;
+}
+
+.name-submit {
+    height: 15%;
+    width: 20%;
+
+    border-radius: 15px;
+    border: 2px solid white;
+    color: white;
+    background-color: black;
+    font-size: 20px;
+
+    transition: transform 0.5s ease;
+}
+.name-submit:hover {
+    transform: scale(1.1);
+}
