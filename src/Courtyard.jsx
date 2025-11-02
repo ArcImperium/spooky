@@ -19,7 +19,7 @@ function Courtyard({setPage, setUnlock1, unlock1, name, setName, setShowNameInpu
         <div className="name-wrap">
             {showNameInput && (<input className="name-input" type="text" value={name} onChange={(event) => {setName(event.target.value)}} placeholder="Enter Name"/>)}
             <h1 className="name-preview">Greetings, {name}</h1>
-            {showNameInput && (<button className="name-submit" onClick={() => {if (name.length > 0) {submitName()}}}>Yes?</button>)}
+            {showNameInput && (<button className="name-submit" onClick={() => {if (name.length > 0) {submitName()}}}>YES?</button>)}
         </div>
         </>
     )

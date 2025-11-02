@@ -39,6 +39,8 @@ function App() {
 
   const [name, setName] = useState("")
   const [showNameInput, setShowNameInput] = useState(true)
+  const stoneOrder = shuffleArray([0, 1, 2, 3, 4, 5, 6, 7, 8])
+  const [stoneInput, setStoneInput] = useState([])
 
   useEffect(() => {
     if (page === 1) {
@@ -78,7 +80,7 @@ function App() {
       return <Foyer setPage={setPage} setUnlock2={setUnlock2} unlock2={unlock2}/>
     }
     else if (page === 3) {
-      return <Patio setPage={setPage} setUnlock3={setUnlock3} unlock3={unlock3}/>
+      return <Patio setPage={setPage} setUnlock3={setUnlock3} unlock3={unlock3} stoneOrder={stoneOrder} stoneInput={stoneInput} setStoneInput={setStoneInput}/>
     }
     else if (page === 4) {
       return <Basement setPage={setPage} setUnlock4={setUnlock4} unlock4={unlock4}/>

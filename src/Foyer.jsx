@@ -1,9 +1,21 @@
-import {useEffect} from "react"
+import {useEffect, useState} from "react"
+import Freddy from './assets/freddy.webp'
+import FreddySound from './assets/freddy_sound.mp3'
 
 function Foyer({setPage, setUnlock2, unlock2}) {
+    const [showFreddy, setShowFreddy] = useState(false)
+
     useEffect(() => {
         document.title="Foyer"
     }, [])
+
+    function babyJumpscare() {
+        setShowFreddy(true)
+
+        const audio = new Audio(FreddySound)
+        audio.play()
+        setTimeout(() => {setShowFreddy(false)}, 5000)
+    }
 
     return(
         <>
@@ -17,6 +29,11 @@ function Foyer({setPage, setUnlock2, unlock2}) {
         <div className="delta-room down locked">↓</div>
         <div className="delta-room left locked">←</div>
         <div className="delta-room right locked">→</div></>)}
+        {!unlock2 && (<div className="foyer-info">
+        <h1 className="foyer-text">The Foyer doors are all unlocked,<br/>just press this button to open them:</h1>
+        <button className="name-submit" onClick={() => {babyJumpscare(); setUnlock2(true)}}>OPEN</button>
+        </div>)}
+        {showFreddy && (<img src={Freddy} className="freddy"/>)}
         </>
     )
 }
