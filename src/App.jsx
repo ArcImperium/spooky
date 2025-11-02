@@ -27,6 +27,16 @@ function App() {
   const [discovered8, setDiscovered8] = useState(false)
   const [discovered9, setDiscovered9] = useState(false)
 
+  const [unlock1, setUnlock1] = useState(false)
+  const [unlock2, setUnlock2] = useState(false)
+  const [unlock3, setUnlock3] = useState(false)
+  const [unlock4, setUnlock4] = useState(false)
+  const [unlock5, setUnlock5] = useState(false)
+  const [unlock6, setUnlock6] = useState(false)
+  const [unlock7, setUnlock7] = useState(false)
+  const [unlock8, setUnlock8] = useState(false)
+  const [unlock9, setUnlock9] = useState(false)
+
   useEffect(() => {
     if (page === 1) {
       setDiscovered1(true)
@@ -59,31 +69,31 @@ function App() {
 
   function findPage() {
     if (page === 1) {
-      return <Courtyard setPage={setPage}/>
+      return <Courtyard setPage={setPage} setUnlock1={setUnlock1} unlock1={unlock1}/>
     }
     else if (page === 2) {
-      return <Foyer setPage={setPage}/>
+      return <Foyer setPage={setPage} setUnlock2={setUnlock2} unlock2={unlock2}/>
     }
     else if (page === 3) {
-      return <Patio setPage={setPage}/>
+      return <Patio setPage={setPage} setUnlock3={setUnlock3} unlock3={unlock3}/>
     }
     else if (page === 4) {
-      return <Basement setPage={setPage}/>
+      return <Basement setPage={setPage} setUnlock4={setUnlock4} unlock4={unlock4}/>
     }
     else if (page === 5) {
-      return <Attic setPage={setPage}/>
+      return <Attic setPage={setPage} setUnlock5={setUnlock5} unlock5={unlock5}/>
     }
     else if (page === 6) {
-      return <Parlor setPage={setPage}/>
+      return <Parlor setPage={setPage} setUnlock6={setUnlock6} unlock6={unlock6}/>
     }
     else if (page === 7) {
-      return <Dining setPage={setPage}/>
+      return <Dining setPage={setPage} setUnlock7={setUnlock7} unlock7={unlock7}/>
     }
     else if (page === 8) {
-      return <Kitchen setPage={setPage}/>
+      return <Kitchen setPage={setPage} setUnlock8={setUnlock8} unlock8={unlock8}/>
     }
     else if (page === 9) {
-      return <Bedroom setPage={setPage}/>
+      return <Bedroom setPage={setPage} setUnlock9={setUnlock9} unlock0={unlock9}/>
     }
     else {
       return <Home setPage={setPage} discovered1={discovered1} discovered2={discovered2} discovered3={discovered3} discovered4={discovered4} discovered5={discovered5} discovered6={discovered6} discovered7={discovered7} discovered8={discovered8} discovered9={discovered9}/>

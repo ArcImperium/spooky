@@ -1,6 +1,6 @@
 import {useEffect} from "react"
 
-function Courtyard({setPage}) {
+function Courtyard({setPage, setUnlock1, unlock1}) {
     useEffect(() => {
         document.title="Courtyard"
     }, [])
@@ -8,7 +8,8 @@ function Courtyard({setPage}) {
     return(
         <>
         <h1 className="room-name" onClick={() => {setPage(0)}}>Courtyard</h1>
-        <div className="delta-room up" onClick={() => {setPage(2)}}>↑</div>
+        {unlock1 && (<div className="delta-room up" onClick={() => {setPage(2)}}>↑</div>)}
+        {!unlock1 && (<div className="delta-room up locked">↑</div>)}
         </>
     )
 }
