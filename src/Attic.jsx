@@ -7,7 +7,8 @@ function Attic({setPage, setUnlock5, unlock5}) {
     
     return(
         <>
-        <h1 className="room-name" onClick={() => {setPage(0)}}>Attic</h1>
+        <h1 className="room-name">Attic</h1>
+        <button className="home-button" onClick={() => {setPage(0)}}>HOME</button>
         {unlock5 && (<div className="delta-room up" onClick={() => {setPage(6)}}>↑</div>)}
         {!unlock5 && (<div className="delta-room up locked">↑</div>)}
         </>

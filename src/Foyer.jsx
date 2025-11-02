@@ -7,7 +7,8 @@ function Foyer({setPage, setUnlock2, unlock2}) {
 
     return(
         <>
-        <h1 className="room-name" onClick={() => {setPage(0)}}>Foyer</h1>
+        <h1 className="room-name">Foyer</h1>
+        <button className="home-button" onClick={() => {setPage(0)}}>HOME</button>
         {unlock2 && (<><div className="delta-room up" onClick={() => {setPage(3)}}>↑</div>
         <div className="delta-room down" onClick={() => {setPage(1)}}>↓</div>
         <div className="delta-room left" onClick={() => {setPage(7)}}>←</div>

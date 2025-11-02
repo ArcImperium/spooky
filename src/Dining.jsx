@@ -7,7 +7,8 @@ function Dining({setPage, setUnlock7, unlock7}) {
 
     return(
         <>
-        <h1 className="room-name" onClick={() => {setPage(0)}}>Dining Room</h1>
+        <h1 className="room-name">Dining Room</h1>
+        <button className="home-button" onClick={() => {setPage(0)}}>HOME</button>
         {unlock7 && (<><div className="delta-room up" onClick={()  => {setPage(8)}}>↑</div>
         <div className="delta-room down" onClick={() => {setPage(4)}}>↓</div>
         <div className="delta-room right" onClick={() => {setPage(2)}}>→</div></>)}
