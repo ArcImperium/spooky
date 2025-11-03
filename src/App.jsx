@@ -104,7 +104,7 @@ function App() {
       return <Kitchen setPage={setPage} setUnlock8={setUnlock8} unlock8={unlock8}/>
     }
     else if (page === 9) {
-      return <Bedroom setPage={setPage} setUnlock9={setUnlock9} unlock0={unlock9}/>
+      return <Bedroom setPage={setPage} setUnlock9={setUnlock9} unlock9={unlock9}/>
     }
     else {
       return <Home setPage={setPage} discovered1={discovered1} discovered2={discovered2} discovered3={discovered3} discovered4={discovered4} discovered5={discovered5} discovered6={discovered6} discovered7={discovered7} discovered8={discovered8} discovered9={discovered9}/>
