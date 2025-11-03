@@ -227,3 +227,46 @@
     background-color: crimson;
     border-radius: 50px;
 }
+
+.mysterious-voice {
+    position: fixed;
+    display: flex;
+    height: 50%;
+    width: 25%;
+    top: 25%;
+    left: 20%;
+
+    border: 2px solid cornflowerblue;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.mystery {
+    font-size: 20px;
+    text-align: center;
+}
+
+.your-voice {
+    position: fixed;
+    display: flex;
+    height: 50%;
+    width: 25%;
+    top: 25%;
+    right: 20%;
+
+    border: 2px solid crimson;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.conversation-button {
+    font-size: 20px;
+    width: 90%;
+
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}

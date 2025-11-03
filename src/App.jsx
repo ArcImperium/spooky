@@ -95,7 +95,7 @@ function App() {
       return <Attic setPage={setPage} setUnlock5={setUnlock5} unlock5={unlock5}/>
     }
     else if (page === 6) {
-      return <Parlor setPage={setPage} setUnlock6={setUnlock6} unlock6={unlock6}/>
+      return <Parlor setPage={setPage} setUnlock6={setUnlock6} unlock6={unlock6} name={name}/>
     }
     else if (page === 7) {
       return <Dining setPage={setPage} setUnlock7={setUnlock7} unlock7={unlock7}/>
