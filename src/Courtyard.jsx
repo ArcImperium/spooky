@@ -21,8 +21,8 @@ function Courtyard({setPage, setUnlock1, unlock1, name, setName, setShowNameInpu
             <h1 className="name-preview">Greetings, {name}</h1>
             {showNameInput && (<button className="name-submit" onClick={() => {if (name.length > 0) {submitName()}}}>YES?</button>)}
         </div>
-        {!win && (<button className="exit yes" onClick={() => {setWin(true)}}>EXIT</button>)}
-        {win && (<button className="exit no">EXIT</button>)}
+        {win && (<button className="exit yes" onClick={() => {setWin(true)}}>EXIT</button>)}
+        {!win && (<button className="exit no">EXIT</button>)}
         </>
     )
 }
