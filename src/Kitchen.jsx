@@ -13,6 +13,9 @@ function Kitchen({setPage, setUnlock8, unlock8}) {
         <div className="delta-room right" onClick={() => {setPage(3)}}>→</div></>)}
         {!unlock8 && (<><div className="delta-room down locked">↓</div>
         <div className="delta-room right locked">→</div></>)}
+        <div className="extremities-wrap">
+            <h1 className="extremities-text">Here's the danger.<br/>You find a dead body on the floor.<br/>It's been there for about a week,<br/>with a terrible stench emitting from it.<br/>You should leave, quickly...</h1>
+        </div>
         </>
     )
 }

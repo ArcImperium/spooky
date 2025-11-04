@@ -11,6 +11,9 @@ import Foyer from './Foyer.jsx'
 import Kitchen from './Kitchen.jsx'
 import Parlor from './Parlor.jsx'
 import Patio from './Patio.jsx'
+import Gate from './assets/gate.png'
+import Ghost from './assets/ghost.webp'
+import Casper from './assets/casper_sound.mp3'
 
 function App() {
   const [page, setPage] = useState(0)
@@ -34,13 +37,17 @@ function App() {
   const [unlock5, setUnlock5] = useState(true)
   const [unlock6, setUnlock6] = useState(false)
   const [unlock7, setUnlock7] = useState(false)
-  const [unlock8, setUnlock8] = useState(false)
+  const [unlock8, setUnlock8] = useState(true)
   const [unlock9, setUnlock9] = useState(false)
 
   const [name, setName] = useState("")
   const [showNameInput, setShowNameInput] = useState(true)
   const [stoneOrder, setStoneOrder] = useState([])
   const [stoneInput, setStoneInput] = useState([])
+  const [roomKey, setKey] = useState("")
+  const [showKeyInput, setShowKeyInput] = useState(true)
+
+  const [showGhost, setShowGhost] = useState(false)
 
   useEffect(() =>{
     const stones = [0, 1, 2, 3, 4, 5, 6, 7]
@@ -80,7 +87,7 @@ function App() {
 
   function findPage() {
     if (page === 1) {
-      return <Courtyard setPage={setPage} setUnlock1={setUnlock1} unlock1={unlock1} name={name} setName={setName} setShowNameInput={setShowNameInput} showNameInput={showNameInput}/>
+      return <Courtyard setPage={setPage} setUnlock1={setUnlock1} unlock1={unlock1} name={name} setName={setName} setShowNameInput={setShowNameInput} showNameInput={showNameInput} win={win} setWin={setWin}/>
     }
     else if (page === 2) {
       return <Foyer setPage={setPage} setUnlock2={setUnlock2} unlock2={unlock2}/>
@@ -98,7 +105,7 @@ function App() {
       return <Parlor setPage={setPage} setUnlock6={setUnlock6} unlock6={unlock6} name={name}/>
     }
     else if (page === 7) {
-      return <Dining setPage={setPage} setUnlock7={setUnlock7} unlock7={unlock7}/>
+      return <Dining setPage={setPage} setUnlock7={setUnlock7} unlock7={unlock7} showKeyInput={showKeyInput} setShowKeyInput={setShowKeyInput} roomKey={roomKey} setKey={setKey} name={name}/>
     }
     else if (page === 8) {
       return <Kitchen setPage={setPage} setUnlock8={setUnlock8} unlock8={unlock8}/>
@@ -111,10 +118,26 @@ function App() {
     }
   }
 
+  function finishGame() {
+    setTimeout(() => {setShowGhost(true)}, 250)
+
+    const audio = new Audio(Casper)
+    audio.play()
+  }
+
   return (
     <>
-    {showStory && (<Story setShowStory={setShowStory}/>)}
-    {!showStory && (<>{findPage(page)}</>)}
+    {!win && (
+      <>
+      {showStory && (<Story setShowStory={setShowStory} setWin={setWin}/>)}
+      {!showStory && (<>{findPage(page)}</>)}
+      </>
+    )}
+    {win && (<div className="win-wrap">
+      <img src={Gate} className="gate"/>
+      <button className="finish-line" onClick={() => {finishGame()}}>LEAVE</button>
+      {showGhost && (<img src={Ghost} className="ghost" onClick={() => {setShowGhost(false)}}/>)}
+    </div>)}
     </>
   )
 }

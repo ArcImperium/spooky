@@ -11,8 +11,8 @@ function Attic({setPage, setUnlock5, unlock5}) {
         <button className="home-button" onClick={() => {setPage(0)}}>HOME</button>
         {unlock5 && (<div className="delta-room up" onClick={() => {setPage(6)}}>↑</div>)}
         {!unlock5 && (<div className="delta-room up locked">↑</div>)}
-        <div className="extremities-text">
-            <h1>There's nothing in the Attic,<br/>but beware of danger...</h1>
+        <div className="extremities-wrap">
+            <h1 className="extremities-text">There's nothing in the Attic,<br/>but beware of danger...</h1>
         </div>
         </>
     )

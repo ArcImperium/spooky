@@ -1,9 +1,16 @@
 import {useEffect} from "react"
 
-function Dining({setPage, setUnlock7, unlock7}) {
+function Dining({setPage, setUnlock7, unlock7, showKeyInput, setShowKeyInput, roomKey, setKey, name}) {
     useEffect(() => {
         document.title="Dining Room"
     }, [])
+
+    function submitKey() {
+        if (roomKey === "spooks") {
+            setUnlock7(true)
+            setShowKeyInput(false)
+        }
+    }
 
     return(
         <>
@@ -15,6 +22,11 @@ function Dining({setPage, setUnlock7, unlock7}) {
         {!unlock7 && (<><div className="delta-room up locked">↑</div>
         <div className="delta-room down locked">↓</div>
         <div className="delta-room right locked">→</div></>)}
+        <div className="name-wrap">
+            {showKeyInput && (<input className="name-input" type="text" value={roomKey} onChange={(event) => {setKey(event.target.value)}} placeholder="Enter Key"/>)}
+            <h1 className="name-preview">Goodbye, {name}</h1>
+            {showKeyInput && (<button className="name-submit" onClick={() => {submitKey()}}>Unlock</button>)}
+        </div>
         </>
     )
 }
