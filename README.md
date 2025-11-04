@@ -1,3 +1,11 @@
+This is a game about escaping a spooky mansion.
+You need to click through the storyline at the beginning, unless you take the easy way out.
+Complete the quest in each room, and then exit through the front gate.
+For the Courtyard, enter a name; for the Foyer, click the button; for the Patio, click the stones in the correct order; for the Bedroom, sleep; for the Parlor, follow the conversation; for the Dining Room, enter the key from the Parlor conversation; there are no challenges for the Attic, Basement, or Kitchen.
+After doing so, go back to the Courtyard and click the exit button.
+Then click the leave button to officially end the game. (Taking the easy way out will automatically put you at this point)
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
